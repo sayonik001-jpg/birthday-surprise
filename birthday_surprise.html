@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Khushi ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;background:#080617;color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#55165c55,transparent 35%),radial-gradient(circle at 80% 70%,#281c7755,transparent 35%);pointer-events:none;z-index:-1}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:55px 20px;position:relative}
+.container{width:min(950px,100%);text-align:center}
+.script{font-family:"Great Vibes",cursive;color:#ff9fda;font-size:clamp(3rem,9vw,6.5rem);line-height:1.1;text-shadow:0 0 25px #ff4fb477}
+h2{font-size:clamp(1.7rem,5vw,3rem);margin-bottom:20px;color:#ffc4e8}
+p{line-height:1.9;color:#ead8ed}
+.btn{border:1px solid #ff71c4;background:linear-gradient(135deg,#ff4fa3,#9d55ff);color:white;padding:15px 30px;border-radius:40px;font-size:1rem;cursor:pointer;margin:20px 8px;box-shadow:0 0 25px #ff4fa355;transition:.3s}
+.btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 0 35px #ff4fa399}
+.hidden{display:none!important}
+.glow-card{background:#ffffff0c;border:1px solid #ff9fda44;border-radius:25px;padding:35px;backdrop-filter:blur(12px);box-shadow:0 0 45px #8e3b8140}
+.heart{position:fixed;bottom:-30px;font-size:22px;animation:float 9s linear infinite;opacity:.6;pointer-events:none}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.gift{font-size:110px;animation:pulse 1.8s infinite;filter:drop-shadow(0 0 20px #ff70c5)}
+.photo-frame{width:min(330px,90%);aspect-ratio:1/1;margin:25px auto;border:8px solid #ffc4e8;border-radius:20px;overflow:hidden;transform:rotate(-3deg);box-shadow:0 0 40px #ff4fa366;background:#20152b;display:flex;align-items:center;justify-content:center}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+.photo-placeholder{padding:20px;color:#dcb9d7}
+input[type=file]{display:none}
+label.upload{display:inline-block;cursor:pointer}
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin:25px 0}
+.memory{padding:25px;border-radius:18px;background:#ffffff0b;border:1px solid #ff9fda33}
+.memory span{font-size:35px;display:block;margin-bottom:10px}
+#finale{background:radial-gradient(circle,#4a164b55,transparent 60%)}
+.small{font-size:.85rem;color:#bca5c0}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+
+<section id="welcome">
+<div class="container">
+<div style="font-size:1.1rem;letter-spacing:3px">A SPECIAL SURPRISE 💌</div>
+<div class="script">Happy Birthday<br>Khushi ❤️</div><p style="margin-top:15px;color:#ffc4e8;letter-spacing:2px">16 JANUARY 2008 🎂</p>
+<p style="max-width:650px;margin:25px auto">Today is not just another day...<br>It is the day my favourite person, Khushi, came into this world. ✨</p>
+<button class="btn" onclick="go('gift')">Click to Begin ✨</button>
+</div>
+</section>
+
+<section id="gift">
+<div class="container">
+<div class="small">STEP 1 / 5</div>
+<h2>A little gift for you 🎁</h2>
+<div class="gift">🎁</div>
+<p>There is something special waiting inside...</p>
+<button class="btn" onclick="openGift()">Open Your Gift 💖</button>
+<div id="giftMessage" class="glow-card hidden">
+<div class="script" style="font-size:3.2rem">Happy Birthday, Khushi! 🎂</div>
+<p>Khushi, your smile makes my world brighter and your presence makes every ordinary day special. On 16 January, the world received someone truly precious—and I am lucky to have you in my life. 💖</p>
+<button class="btn" onclick="go('message')">Next Surprise →</button>
+</div>
+</div>
+</section>
+
+<section id="message">
+<div class="container">
+<div class="small">STEP 2 / 5</div>
+<h2>A Message Just For You 💕</h2>
+<div class="glow-card">
+<p id="personalMessage">Hey Khushi, my love ❤️<br><br>
+Some people enter our lives and quietly make everything more beautiful. You are that special person for me.<br><br>
+Your smile is my favourite little happiness, your voice is my comfort, and your presence is a gift I never want to take for granted.<br><br>
+On your birthday, I wish you endless smiles, peaceful days, big achievements, and every beautiful dream coming true. May life always give you reasons to shine.<br><br>
+Happy Birthday, Khushi! Keep smiling, keep glowing, and always remember that you are deeply special. 🎂🌸<br><br>
+Forever cheering for you,<br>Someone who cares for you endlessly 💞</p>
+</div>
+<button class="btn" onclick="go('photo')">Reveal a Special Photo 📸</button>
+</div>
+</section>
+
+<section id="photo">
+<div class="container">
+<div class="small">STEP 3 / 5</div>
+<h2>A Special Memory 📷</h2>
+<p>Tap below to reveal a photo. You can add your own special person's photo.</p>
+<div class="photo-frame">
+<img id="specialPhoto" class="hidden" alt="Your special photo">
+<div id="photoPlaceholder" class="photo-placeholder">❤️<br><br>Your special photo will appear here</div>
+</div>
+<label class="btn upload" for="photoUpload">Choose Your Photo</label>
+<input id="photoUpload" type="file" accept="image/*" onchange="loadPhoto(event)">
+<br>
+<button class="btn" onclick="revealPhoto()">Show My Photo 💗</button>
+<br>
+<button class="btn" onclick="go('memories')">Next Surprise →</button>
+</div>
+</section>
+
+<section id="memories">
+<div class="container">
+<div class="small">STEP 4 / 5</div>
+<h2>Our Beautiful Moments 🌹</h2>
+<p>Little moments become the most beautiful memories.</p>
+<div class="timeline">
+<div class="memory"><span>🌸</span><b>Sweet Moments</b><p>Every little moment with you is special.</p></div>
+<div class="memory"><span>🤝</span><b>Always Together</b><p>Through every smile and every day.</p></div>
+<div class="memory"><span>🌙</span><b>You & Me</b><p>Two hearts, one beautiful story.</p></div>
+<div class="memory"><span>🎀</span><b>Little Things</b><p>Your smile is my favourite thing.</p></div>
+</div>
+<button class="btn" onclick="go('finale');confetti()">Final Surprise 🎉</button>
+</div>
+</section>
+
+<section id="finale">
+<div class="container">
+<div class="script">Happy Birthday<br>Khushi ❤️</div>
+<p style="max-width:650px;margin:25px auto">Khushi, may your life always be filled with love, happiness, success and beautiful dreams. May every new year of your life bring you closer to everything your heart wishes for. Thank you for being you. 💗</p>
+<div class="glow-card">
+<h2>For Khushi, Forever & Always 💞</h2>
+<p>With all my love, today and every day.</p>
+</div>
+<button class="btn" onclick="confetti()">Make It Rain Hearts 💖</button>
+<p class="small">Made with love, especially for Khushi. 🎀</p>
+</div>
+</section>
+
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function openGift(){document.getElementById('giftMessage').classList.remove('hidden');confetti()}
+function loadPhoto(e){
+ const file=e.target.files[0]; if(!file)return;
+ const reader=new FileReader();
+ reader.onload=()=>{document.getElementById('specialPhoto').src=reader.result;document.getElementById('specialPhoto').dataset.ready="true"};
+ reader.readAsDataURL(file);
+}
+function revealPhoto(){
+ const img=document.getElementById('specialPhoto');
+ if(img.dataset.ready==="true"){img.classList.remove('hidden');document.getElementById('photoPlaceholder').classList.add('hidden');confetti()}
+ else alert("Please choose a photo first ❤️");
+}
+function confetti(){
+ for(let i=0;i<35;i++){
+  const el=document.createElement('div');el.textContent=['💖','💕','✨','🎉','🌸'][Math.floor(Math.random()*5)];
+  el.style.position='fixed';el.style.left=Math.random()*100+'vw';el.style.top='-30px';el.style.fontSize=(15+Math.random()*22)+'px';el.style.zIndex=99;
+  el.style.transition='transform 3s linear,opacity 3s';document.body.appendChild(el);
+  setTimeout(()=>{el.style.transform='translateY(110vh) rotate(720deg)';el.style.opacity=0},30);
+  setTimeout(()=>el.remove(),3300);
+ }
+}
+setInterval(()=>{
+ const h=document.createElement('div');h.className='heart';h.textContent='❤';h.style.left=Math.random()*100+'vw';h.style.animationDuration=(6+Math.random()*5)+'s';document.getElementById('hearts').appendChild(h);
+ setTimeout(()=>h.remove(),11000);
+},700);
+</script>
+</body>
+</html>
