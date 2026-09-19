@@ -3,154 +3,814 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Khushi 💝</title>
+<title>Birthday Surprise 💝</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;background:#080617;color:#fff;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,#55165c55,transparent 35%),radial-gradient(circle at 80% 70%,#281c7755,transparent 35%);pointer-events:none;z-index:-1}
-section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:55px 20px;position:relative}
-.container{width:min(950px,100%);text-align:center}
-.script{font-family:"Great Vibes",cursive;color:#ff9fda;font-size:clamp(3rem,9vw,6.5rem);line-height:1.1;text-shadow:0 0 25px #ff4fb477}
-h2{font-size:clamp(1.7rem,5vw,3rem);margin-bottom:20px;color:#ffc4e8}
-p{line-height:1.9;color:#ead8ed}
-.btn{border:1px solid #ff71c4;background:linear-gradient(135deg,#ff4fa3,#9d55ff);color:white;padding:15px 30px;border-radius:40px;font-size:1rem;cursor:pointer;margin:20px 8px;box-shadow:0 0 25px #ff4fa355;transition:.3s}
-.btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 0 35px #ff4fa399}
-.hidden{display:none!important}
-.glow-card{background:#ffffff0c;border:1px solid #ff9fda44;border-radius:25px;padding:35px;backdrop-filter:blur(12px);box-shadow:0 0 45px #8e3b8140}
-.heart{position:fixed;bottom:-30px;font-size:22px;animation:float 9s linear infinite;opacity:.6;pointer-events:none}
-@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-110vh) rotate(360deg);opacity:0}}
-@keyframes pulse{50%{transform:scale(1.12)}}
-.gift{font-size:110px;animation:pulse 1.8s infinite;filter:drop-shadow(0 0 20px #ff70c5)}
-.photo-frame{width:min(330px,90%);aspect-ratio:1/1;margin:25px auto;border:8px solid #ffc4e8;border-radius:20px;overflow:hidden;transform:rotate(-3deg);box-shadow:0 0 40px #ff4fa366;background:#20152b;display:flex;align-items:center;justify-content:center}
-.photo-frame img{width:100%;height:100%;object-fit:cover}
-.photo-placeholder{padding:20px;color:#dcb9d7}
-input[type=file]{display:none}
-label.upload{display:inline-block;cursor:pointer}
-.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin:25px 0}
-.memory{padding:25px;border-radius:18px;background:#ffffff0b;border:1px solid #ff9fda33}
-.memory span{font-size:35px;display:block;margin-bottom:10px}
-#finale{background:radial-gradient(circle,#4a164b55,transparent 60%)}
-.small{font-size:.85rem;color:#bca5c0}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+body{
+  font-family:Poppins,sans-serif;
+  background:#080617;
+  color:white;
+  overflow:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+  radial-gradient(circle at 20% 20%,#55165c55,transparent 35%),
+  radial-gradient(circle at 80% 70%,#281c7755,transparent 35%);
+  pointer-events:none;
+  z-index:-1;
+}
+
+section{
+  display:none;
+  height:100vh;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  padding:35px 20px;
+  position:relative;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+section.active{
+  display:flex;
+  animation:pageIn .45s ease;
+}
+
+@keyframes pageIn{
+  from{
+    opacity:0;
+    transform:translateX(18px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+.container{
+  width:min(950px,100%);
+  text-align:center;
+}
+
+.script{
+  font-family:"Great Vibes",cursive;
+  color:#ff9fda;
+  font-size:clamp(3rem,9vw,6.5rem);
+  line-height:1.1;
+  text-shadow:0 0 25px #ff4fb477;
+}
+
+h2{
+  font-size:clamp(1.7rem,5vw,3rem);
+  margin-bottom:20px;
+  color:#ffc4e8;
+}
+
+p{
+  line-height:1.9;
+  color:#ead8ed;
+}
+
+.btn{
+  border:1px solid #ff71c4;
+  background:linear-gradient(135deg,#ff4fa3,#9d55ff);
+  color:white;
+  padding:15px 30px;
+  border-radius:40px;
+  font-size:1rem;
+  cursor:pointer;
+  margin:20px 8px;
+  box-shadow:0 0 25px #ff4fa355;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 0 35px #ff4fa399;
+}
+
+.hidden{
+  display:none!important;
+}
+
+.glow-card{
+  background:#ffffff0c;
+  border:1px solid #ff9fda44;
+  border-radius:25px;
+  padding:35px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 45px #8e3b8140;
+}
+
+.heart{
+  position:fixed;
+  bottom:-30px;
+  font-size:22px;
+  animation:float 9s linear infinite;
+  opacity:.6;
+  pointer-events:none;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0) rotate(0);
+    opacity:0;
+  }
+  15%{
+    opacity:.8;
+  }
+  100%{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+@keyframes pulse{
+  50%{
+    transform:scale(1.12);
+  }
+}
+
+.gift{
+  font-size:110px;
+  animation:pulse 1.8s infinite;
+  filter:drop-shadow(0 0 20px #ff70c5);
+}
+
+input[type=file]{
+  display:none;
+}
+
+.name-box{
+  margin:22px auto;
+  max-width:430px;
+}
+
+.name-input,
+.date-input{
+  width:100%;
+  padding:15px 18px;
+  border-radius:30px;
+  border:1px solid #ff9fda88;
+  background:#ffffff12;
+  color:white;
+  outline:none;
+  font-size:1rem;
+  text-align:center;
+}
+
+.name-input::placeholder{
+  color:#dcb9d7;
+}
+
+.date-label{
+  display:block;
+  margin:12px 0 8px;
+  color:#ffc4e8;
+  font-size:.95rem;
+}
+
+.date-input{
+  color-scheme:dark;
+}
+
+.photo-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:14px;
+  margin:22px auto;
+  max-width:700px;
+}
+
+.photo-gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:16px;
+  border:3px solid #ffc4e8;
+  box-shadow:0 0 20px #ff4fa344;
+}
+
+.photo-placeholder{
+  padding:20px;
+  color:#dcb9d7;
+}
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:18px;
+  margin:25px 0;
+}
+
+.memory{
+  padding:25px;
+  border-radius:18px;
+  background:#ffffff0b;
+  border:1px solid #ff9fda33;
+}
+
+.memory span{
+  font-size:35px;
+  display:block;
+  margin-bottom:10px;
+}
+
+#finale{
+  background:radial-gradient(circle,#4a164b55,transparent 60%);
+}
+
+.small{
+  font-size:.85rem;
+  color:#bca5c0;
+}
+
+@media(max-width:600px){
+  section{
+    padding:28px 15px;
+  }
+
+  .glow-card{
+    padding:22px;
+  }
+
+  .gift{
+    font-size:85px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <div id="hearts"></div>
 
-<section id="welcome">
+<!-- WELCOME PAGE -->
+<section id="welcome" class="active">
 <div class="container">
-<div style="font-size:1.1rem;letter-spacing:3px">A SPECIAL SURPRISE 💌</div>
-<div class="script">Happy Birthday<br>Khushi ❤️</div><p style="margin-top:15px;color:#ffc4e8;letter-spacing:2px">16 JANUARY 2008 🎂</p>
-<p style="max-width:650px;margin:25px auto">Today is not just another day...<br>It is the day my favourite person, Khushi, came into this world. ✨</p>
-<button class="btn" onclick="go('gift')">Click to Begin ✨</button>
+
+<div style="font-size:1.1rem;letter-spacing:3px">
+A SPECIAL SURPRISE 💌
+</div>
+
+<div class="script">
+Happy Birthday<br>
+<span class="personName">Your Love</span> ❤️
+</div>
+
+<p id="birthdayDateText"
+style="margin-top:15px;color:#ffc4e8;letter-spacing:2px">
+Your Special Day 🎂
+</p>
+
+<p style="max-width:650px;margin:25px auto">
+Today is not just another day...<br>
+It is the day someone special came into this world. ✨
+</p>
+
+<div class="name-box">
+
+<input
+id="nameInput"
+class="name-input"
+type="text"
+maxlength="40"
+placeholder="Enter birthday person's name ❤️"
+>
+
+<label class="date-label" for="dobInput">
+Enter Birthday Date 🎂
+</label>
+
+<input
+id="dobInput"
+class="date-input"
+type="date"
+>
+
+</div>
+
+<button class="btn" onclick="startSurprise()">
+Click to Begin ✨
+</button>
+
 </div>
 </section>
 
+
+<!-- GIFT PAGE -->
 <section id="gift">
 <div class="container">
+
 <div class="small">STEP 1 / 5</div>
+
 <h2>A little gift for you 🎁</h2>
+
 <div class="gift">🎁</div>
+
 <p>There is something special waiting inside...</p>
-<button class="btn" onclick="openGift()">Open Your Gift 💖</button>
+
+<button class="btn" onclick="openGift()">
+Open Your Gift 💖
+</button>
+
 <div id="giftMessage" class="glow-card hidden">
-<div class="script" style="font-size:3.2rem">Happy Birthday, Khushi! 🎂</div>
-<p>Khushi, your smile makes my world brighter and your presence makes every ordinary day special. On 16 January, the world received someone truly precious—and I am lucky to have you in my life. 💖</p>
-<button class="btn" onclick="go('message')">Next Surprise →</button>
+
+<div class="script" style="font-size:3.2rem">
+Happy Birthday,
+<span class="personName">Your Love</span>! 🎂
 </div>
+
+<p>
+<span class="personName">Your Love</span>,
+your smile makes my world brighter and your presence
+makes every ordinary day special.
+
+On <span id="giftDateText">your special day</span>,
+the world received someone truly precious—and I am lucky
+to have you in my life. 💖
+</p>
+
+<button class="btn" onclick="go('message')">
+Next Surprise →
+</button>
+
+</div>
+
 </div>
 </section>
 
+
+<!-- MESSAGE PAGE -->
 <section id="message">
 <div class="container">
+
 <div class="small">STEP 2 / 5</div>
+
 <h2>A Message Just For You 💕</h2>
+
 <div class="glow-card">
-<p id="personalMessage">Hey Khushi, my love ❤️<br><br>
-Some people enter our lives and quietly make everything more beautiful. You are that special person for me.<br><br>
-Your smile is my favourite little happiness, your voice is my comfort, and your presence is a gift I never want to take for granted.<br><br>
-On your birthday, I wish you endless smiles, peaceful days, big achievements, and every beautiful dream coming true. May life always give you reasons to shine.<br><br>
-Happy Birthday, Khushi! Keep smiling, keep glowing, and always remember that you are deeply special. 🎂🌸<br><br>
-Forever cheering for you,<br>Someone who cares for you endlessly 💞</p>
+
+<p id="personalMessage">
+
+Hey <span class="personName">Your Love</span>, my love ❤️
+<br><br>
+
+Some people enter our lives and quietly make everything
+more beautiful. You are that special person for me.
+<br><br>
+
+Your smile is my favourite little happiness, your voice
+is my comfort, and your presence is a gift I never want
+to take for granted.
+<br><br>
+
+On your birthday, I wish you endless smiles, peaceful days,
+big achievements, and every beautiful dream coming true.
+May life always give you reasons to shine.
+<br><br>
+
+Happy Birthday, <span class="personName">Your Love</span>!
+Keep smiling, keep glowing, and always remember that
+you are deeply special. 🎂🌸
+<br><br>
+
+Forever cheering for you,<br>
+Someone who cares for you endlessly 💞
+
+</p>
+
 </div>
-<button class="btn" onclick="go('photo')">Reveal a Special Photo 📸</button>
+
+<button class="btn" onclick="go('photo')">
+Reveal a Special Photo 📸
+</button>
+
 </div>
 </section>
 
+
+<!-- PHOTO PAGE -->
 <section id="photo">
 <div class="container">
+
 <div class="small">STEP 3 / 5</div>
+
 <h2>A Special Memory 📷</h2>
-<p>Tap below to reveal a photo. You can add your own special person's photo.</p>
-<div class="photo-frame">
-<img id="specialPhoto" class="hidden" alt="Your special photo">
-<div id="photoPlaceholder" class="photo-placeholder">❤️<br><br>Your special photo will appear here</div>
+
+<p>
+Choose one or multiple photos for your special memory. 📸
+</p>
+
+<div id="photoGallery" class="photo-gallery">
+
+<div id="photoPlaceholder" class="photo-placeholder">
+❤️
+<br><br>
+Your selected photos will appear here
 </div>
-<label class="btn upload" for="photoUpload">Choose Your Photo</label>
-<input id="photoUpload" type="file" accept="image/*" onchange="loadPhoto(event)">
+
+</div>
+
+<button
+class="btn"
+type="button"
+onclick="document.getElementById('photoUpload').click()"
+>
+Choose Multiple Photos 📷
+</button>
+
+<input
+id="photoUpload"
+type="file"
+accept="image/*"
+multiple
+>
+
 <br>
-<button class="btn" onclick="revealPhoto()">Show My Photo 💗</button>
+
+<button class="btn" onclick="revealPhotos()">
+Show My Photos 💗
+</button>
+
 <br>
-<button class="btn" onclick="go('memories')">Next Surprise →</button>
+
+<button class="btn" onclick="go('memories')">
+Next Surprise →
+</button>
+
 </div>
 </section>
 
+
+<!-- MEMORIES PAGE -->
 <section id="memories">
 <div class="container">
+
 <div class="small">STEP 4 / 5</div>
+
 <h2>Our Beautiful Moments 🌹</h2>
+
 <p>Little moments become the most beautiful memories.</p>
+
 <div class="timeline">
-<div class="memory"><span>🌸</span><b>Sweet Moments</b><p>Every little moment with you is special.</p></div>
-<div class="memory"><span>🤝</span><b>Always Together</b><p>Through every smile and every day.</p></div>
-<div class="memory"><span>🌙</span><b>You & Me</b><p>Two hearts, one beautiful story.</p></div>
-<div class="memory"><span>🎀</span><b>Little Things</b><p>Your smile is my favourite thing.</p></div>
+
+<div class="memory">
+<span>🌸</span>
+<b>Sweet Moments</b>
+<p>Every little moment with you is special.</p>
 </div>
-<button class="btn" onclick="go('finale');confetti()">Final Surprise 🎉</button>
+
+<div class="memory">
+<span>🤝</span>
+<b>Always Together</b>
+<p>Through every smile and every day.</p>
+</div>
+
+<div class="memory">
+<span>🌙</span>
+<b>You & Me</b>
+<p>Two hearts, one beautiful story.</p>
+</div>
+
+<div class="memory">
+<span>🎀</span>
+<b>Little Things</b>
+<p>Your smile is my favourite thing.</p>
+</div>
+
+</div>
+
+<button class="btn" onclick="go('finale');confetti()">
+Final Surprise 🎉
+</button>
+
 </div>
 </section>
 
+
+<!-- FINAL PAGE -->
 <section id="finale">
 <div class="container">
-<div class="script">Happy Birthday<br>Khushi ❤️</div>
-<p style="max-width:650px;margin:25px auto">Khushi, may your life always be filled with love, happiness, success and beautiful dreams. May every new year of your life bring you closer to everything your heart wishes for. Thank you for being you. 💗</p>
-<div class="glow-card">
-<h2>For Khushi, Forever & Always 💞</h2>
-<p>With all my love, today and every day.</p>
+
+<div class="script">
+Happy Birthday<br>
+<span class="personName">Your Love</span> ❤️
 </div>
-<button class="btn" onclick="confetti()">Make It Rain Hearts 💖</button>
-<p class="small">Made with love, especially for Khushi. 🎀</p>
+
+<p style="max-width:650px;margin:25px auto">
+
+<span class="personName">Your Love</span>,
+may your life always be filled with love, happiness,
+success and beautiful dreams.
+
+May every new year of your life bring you closer to
+everything your heart wishes for.
+
+Thank you for being you. 💗
+
+</p>
+
+<div class="glow-card">
+
+<h2>
+For <span class="personName">Your Love</span>,
+Forever & Always 💞
+</h2>
+
+<p>With all my love, today and every day.</p>
+
+</div>
+
+<button class="btn" onclick="confetti()">
+Make It Rain Hearts 💖
+</button>
+
+<p class="small">
+Made with love, especially for
+<span class="personName">Your Love</span>. 🎀
+</p>
+
 </div>
 </section>
 
+
 <script>
-function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
-function openGift(){document.getElementById('giftMessage').classList.remove('hidden');confetti()}
-function loadPhoto(e){
- const file=e.target.files[0]; if(!file)return;
- const reader=new FileReader();
- reader.onload=()=>{document.getElementById('specialPhoto').src=reader.result;document.getElementById('specialPhoto').dataset.ready="true"};
- reader.readAsDataURL(file);
+
+/* PAGE CHANGE FUNCTION */
+function go(id){
+
+  document.querySelectorAll("section").forEach(section=>{
+    section.classList.remove("active");
+  });
+
+  const nextPage=document.getElementById(id);
+
+  if(nextPage){
+    nextPage.classList.add("active");
+    nextPage.scrollTop=0;
+  }
+
 }
-function revealPhoto(){
- const img=document.getElementById('specialPhoto');
- if(img.dataset.ready==="true"){img.classList.remove('hidden');document.getElementById('photoPlaceholder').classList.add('hidden');confetti()}
- else alert("Please choose a photo first ❤️");
+
+
+/* OPEN GIFT */
+function openGift(){
+
+  document.getElementById("giftMessage")
+  .classList.remove("hidden");
+
+  confetti();
+
 }
+
+
+/* DATE FORMAT FUNCTION */
+function formatDate(dateValue){
+
+  if(!dateValue){
+    return "your special day";
+  }
+
+  const parts=dateValue.split("-");
+
+  if(parts.length!==3){
+    return dateValue;
+  }
+
+  const months=[
+    "January","February","March","April",
+    "May","June","July","August",
+    "September","October","November","December"
+  ];
+
+  return parts[2]+" "+
+  months[Number(parts[1])-1]+" "+
+  parts[0];
+
+}
+
+
+/* START SURPRISE */
+function startSurprise(){
+
+  const input=document.getElementById("nameInput");
+  const dobInput=document.getElementById("dobInput");
+
+  const enteredName=input.value.trim();
+  const enteredDOB=dobInput.value;
+
+  if(!enteredName){
+
+    alert("Please enter a name first ❤️");
+    input.focus();
+    return;
+
+  }
+
+  if(!enteredDOB){
+
+    alert("Please enter the birthday date 🎂");
+    dobInput.focus();
+    return;
+
+  }
+
+  document.querySelectorAll(".personName").forEach(element=>{
+    element.textContent=enteredName;
+  });
+
+  const readableDate=formatDate(enteredDOB);
+
+  document.getElementById("birthdayDateText")
+  .textContent=readableDate+" 🎂";
+
+  document.getElementById("giftDateText")
+  .textContent=readableDate;
+
+  go("gift");
+
+}
+
+
+/* MULTIPLE PHOTOS */
+let selectedPhotos=[];
+
+document.getElementById("photoUpload")
+.addEventListener("change",loadPhotos);
+
+
+function loadPhotos(event){
+
+  const files=Array.from(event.target.files || [])
+  .filter(file=>file.type.startsWith("image/"));
+
+  if(!files.length){
+
+    alert("Please choose image files only ❤️");
+    return;
+
+  }
+
+  selectedPhotos=[];
+
+  const gallery=document.getElementById("photoGallery");
+
+  gallery.innerHTML=
+  '<p class="small">Loading your photos... 📸</p>';
+
+  let completed=0;
+
+  files.forEach(file=>{
+
+    const reader=new FileReader();
+
+    reader.onload=function(){
+
+      selectedPhotos.push(reader.result);
+      completed++;
+
+      if(completed===files.length){
+
+        gallery.innerHTML=
+        '<p class="small">'+
+        selectedPhotos.length+
+        " photo(s) selected. Tap 'Show My Photos'. ❤️</p>";
+
+      }
+
+    };
+
+    reader.onerror=function(){
+
+      completed++;
+
+      if(completed===files.length &&
+      !selectedPhotos.length){
+
+        gallery.innerHTML=
+        '<p class="small">Could not load the photos. Please try again.</p>';
+
+      }
+
+    };
+
+    reader.readAsDataURL(file);
+
+  });
+
+}
+
+
+/* SHOW PHOTOS */
+function revealPhotos(){
+
+  const gallery=document.getElementById("photoGallery");
+
+  if(!selectedPhotos.length){
+
+    alert("Please choose at least one photo first ❤️");
+    return;
+
+  }
+
+  gallery.innerHTML="";
+
+  selectedPhotos.forEach((photoSrc,index)=>{
+
+    const img=document.createElement("img");
+
+    img.src=photoSrc;
+    img.alt="Special memory "+(index+1);
+
+    gallery.appendChild(img);
+
+  });
+
+  confetti();
+
+}
+
+
+/* CONFETTI EFFECT */
 function confetti(){
- for(let i=0;i<35;i++){
-  const el=document.createElement('div');el.textContent=['💖','💕','✨','🎉','🌸'][Math.floor(Math.random()*5)];
-  el.style.position='fixed';el.style.left=Math.random()*100+'vw';el.style.top='-30px';el.style.fontSize=(15+Math.random()*22)+'px';el.style.zIndex=99;
-  el.style.transition='transform 3s linear,opacity 3s';document.body.appendChild(el);
-  setTimeout(()=>{el.style.transform='translateY(110vh) rotate(720deg)';el.style.opacity=0},30);
-  setTimeout(()=>el.remove(),3300);
- }
+
+  for(let i=0;i<35;i++){
+
+    const el=document.createElement("div");
+
+    el.textContent=[
+      "💖","💕","✨","🎉","🌸"
+    ][Math.floor(Math.random()*5)];
+
+    el.style.position="fixed";
+    el.style.left=Math.random()*100+"vw";
+    el.style.top="-30px";
+    el.style.fontSize=(15+Math.random()*22)+"px";
+    el.style.zIndex=99;
+    el.style.transition=
+    "transform 3s linear,opacity 3s";
+
+    document.body.appendChild(el);
+
+    setTimeout(()=>{
+
+      el.style.transform=
+      "translateY(110vh) rotate(720deg)";
+
+      el.style.opacity=0;
+
+    },30);
+
+    setTimeout(()=>{
+      el.remove();
+    },3300);
+
+  }
+
 }
+
+
+/* FLOATING HEARTS */
 setInterval(()=>{
- const h=document.createElement('div');h.className='heart';h.textContent='❤';h.style.left=Math.random()*100+'vw';h.style.animationDuration=(6+Math.random()*5)+'s';document.getElementById('hearts').appendChild(h);
- setTimeout(()=>h.remove(),11000);
+
+  const h=document.createElement("div");
+
+  h.className="heart";
+  h.textContent="❤";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=
+  (6+Math.random()*5)+"s";
+
+  document.getElementById("hearts")
+  .appendChild(h);
+
+  setTimeout(()=>{
+    h.remove();
+  },11000);
+
 },700);
+
 </script>
+
 </body>
 </html>
