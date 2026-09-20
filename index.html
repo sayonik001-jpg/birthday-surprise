@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Birthday Surprise 💝</title>
+<title>Birthday Moonlight Surprise 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
-
 *{
   box-sizing:border-box;
   margin:0;
@@ -23,73 +22,59 @@ html,body{
 
 body{
   font-family:Poppins,sans-serif;
-  background:#05030d;
+  background:#070313;
   color:white;
-  overflow:hidden;
 }
 
+/* Moonlight background */
 body:before{
   content:"";
   position:fixed;
   inset:0;
-  z-index:-5;
+  z-index:-2;
   background:
-    radial-gradient(circle at 20% 15%,#7b245f55,transparent 30%),
-    radial-gradient(circle at 85% 75%,#30216d66,transparent 35%),
-    linear-gradient(135deg,#07030f,#12061b 48%,#03030b);
+    radial-gradient(circle at 80% 12%,#fff1c733,transparent 13%),
+    radial-gradient(circle at 20% 80%,#b6298540,transparent 35%),
+    linear-gradient(145deg,#080415,#180b29 55%,#03020b);
 }
 
+/* Stars */
 body:after{
-  content:"✦   ·     ✧       ·   ✦      ·       ✧   ·";
+  content:"✦   ·   ✧    ·    ✦   ·   ✧    ·   ✦   ·";
   position:fixed;
   inset:0;
-  z-index:-4;
-  color:#ffd6f455;
+  z-index:-1;
+  color:#ffe3f088;
   font-size:22px;
+  line-height:75px;
   letter-spacing:25px;
-  line-height:65px;
-  white-space:pre-wrap;
   pointer-events:none;
-  opacity:.8;
+  white-space:pre-wrap;
 }
 
+/* Every page */
 section{
   display:none;
-  height:100vh;
   width:100%;
+  height:100dvh;
+  min-height:100dvh;
+  overflow:hidden;
   align-items:center;
   justify-content:center;
-  padding:34px 18px;
+  text-align:center;
+  padding:18px;
   position:relative;
-  overflow-y:auto;
-  overflow-x:hidden;
-  background:radial-gradient(
-    ellipse at 50% 110%,
-    #9d2c6c22,
-    transparent 55%
-  );
-}
-
-section:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 8% 15%,#ff5aab18,transparent 20%),
-    radial-gradient(circle at 92% 25%,#ff6da818,transparent 20%),
-    radial-gradient(circle at 50% 55%,transparent 30%,#00000035 100%);
 }
 
 section.active{
   display:flex;
-  animation:pageIn .45s ease;
+  animation:pageIn .55s ease;
 }
 
 @keyframes pageIn{
   from{
     opacity:0;
-    transform:translateX(18px);
+    transform:translateX(35px);
   }
   to{
     opacity:1;
@@ -99,136 +84,163 @@ section.active{
 
 .container{
   width:min(950px,100%);
-  text-align:center;
+  max-height:100%;
   position:relative;
   z-index:2;
 }
 
 .script{
   font-family:"Great Vibes",cursive;
-  color:#ffd0ed;
+  color:#ffc1e5;
   font-size:clamp(3rem,9vw,6.5rem);
-  line-height:1.08;
-  text-shadow:0 0 12px #ff4fa477,0 0 35px #ff4fa444;
+  line-height:1.05;
+  text-shadow:0 0 25px #ff4fa488;
 }
 
 h2{
   font-family:"Great Vibes",cursive;
-  font-size:clamp(2.1rem,6vw,3.8rem);
-  font-weight:500;
-  margin-bottom:18px;
-  color:#ffb5df;
-  text-shadow:0 0 20px #ff4fa455;
+  font-size:clamp(2rem,6vw,3.8rem);
+  font-weight:400;
+  color:#ffb8e1;
+  margin-bottom:12px;
+  text-shadow:0 0 20px #ff4fa466;
 }
 
 p{
-  line-height:1.8;
-  color:#f1dceb;
+  line-height:1.65;
+  color:#f4ddec;
 }
 
 .small{
-  font-size:.9rem;
-  color:#f2b8d9;
-  letter-spacing:.4px;
+  font-size:.85rem;
+  color:#ffc1e5;
+  letter-spacing:2px;
+  margin-bottom:10px;
 }
 
+/* Buttons */
 .btn{
-  border:1px solid #ff8bcf;
-  background:linear-gradient(135deg,#ff4d91,#b34fff);
+  border:1px solid #ff9ad8;
+  background:linear-gradient(135deg,#ff3997,#b34dff);
   color:white;
-  padding:14px 28px;
+  padding:13px 25px;
   border-radius:40px;
   font-size:1rem;
   cursor:pointer;
-  margin:16px 8px;
-  box-shadow:0 0 20px #ff4fa355,inset 0 0 12px #ffffff18;
+  margin:10px 5px;
+  box-shadow:0 0 25px #ff4fa355;
   transition:.3s;
   position:relative;
-  z-index:3;
+  z-index:5;
 }
 
 .btn:hover{
-  transform:translateY(-4px) scale(1.03);
+  transform:scale(1.05);
   box-shadow:0 0 35px #ff4fa399;
+}
+
+.btn:active{
+  transform:scale(.97);
 }
 
 .hidden{
   display:none!important;
 }
 
-.glow-card{
-  background:linear-gradient(145deg,#211326cc,#090712d9);
-  border:1px solid #ff9fda66;
-  border-radius:20px;
-  padding:30px;
-  backdrop-filter:blur(14px);
-  box-shadow:0 0 35px #d33b7d24,inset 0 0 25px #ff7fb50b;
-}
-
-.gift{
-  font-size:100px;
-  animation:pulse 1.8s infinite;
-  filter:drop-shadow(0 0 25px #ff70c5);
-}
-
-@keyframes pulse{
-  50%{
-    transform:scale(1.12);
-  }
-}
-
-.heart{
-  position:fixed;
-  bottom:-30px;
-  font-size:22px;
-  animation:float 9s linear infinite;
-  opacity:.65;
+/* Moon and decorations */
+.decor{
+  position:absolute;
+  inset:0;
   pointer-events:none;
+  overflow:hidden;
   z-index:1;
 }
 
-@keyframes float{
-  0%{
-    transform:translateY(0) rotate(0);
-    opacity:0;
-  }
-  15%{
-    opacity:.8;
-  }
-  100%{
-    transform:translateY(-110vh) rotate(360deg);
-    opacity:0;
-  }
+.moon{
+  position:absolute;
+  right:8%;
+  top:7%;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:#fff2c7;
+  box-shadow:0 0 20px #fff0ad,0 0 70px #fff0ad77;
 }
 
+.moon:after{
+  content:"";
+  position:absolute;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:#100820;
+  top:-10px;
+  left:17px;
+}
+
+.star{
+  position:absolute;
+  color:#ffd2ec;
+  font-size:24px;
+  animation:twinkle 2.5s infinite alternate;
+}
+
+.flower{
+  position:absolute;
+  font-size:30px;
+  filter:drop-shadow(0 0 10px #ff65b8);
+}
+
+.lantern{
+  position:absolute;
+  font-size:38px;
+  filter:drop-shadow(0 0 12px #ffb15e);
+}
+
+.s1{left:8%;top:13%}
+.s2{right:22%;top:25%;animation-delay:.5s}
+.s3{left:16%;bottom:20%;animation-delay:1s}
+.s4{right:10%;bottom:15%;animation-delay:1.5s}
+
+.f1{left:3%;bottom:5%}
+.f2{right:3%;bottom:7%}
+.f3{left:5%;top:30%}
+.f4{right:7%;top:40%}
+
+.l1{left:8%;top:6%}
+.l2{right:5%;bottom:8%}
+
+@keyframes twinkle{
+  from{opacity:.25;transform:scale(.7)}
+  to{opacity:1;transform:scale(1.3)}
+}
+
+/* Input box */
 .name-box{
-  margin:22px auto;
-  max-width:430px;
+  width:min(430px,100%);
+  margin:15px auto;
 }
 
-.name-input,
-.date-input{
+.name-input,.date-input{
   width:100%;
-  padding:15px 18px;
+  padding:13px 18px;
+  border:1px solid #ff9fda99;
   border-radius:30px;
-  border:1px solid #ff9fda88;
   background:#ffffff12;
   color:white;
   outline:none;
   font-size:1rem;
   text-align:center;
-  box-shadow:0 0 18px #ff4fa311;
 }
 
 .name-input::placeholder{
-  color:#e6b9d7;
+  color:#e9b9d9;
 }
 
 .date-label{
   display:block;
-  margin:12px 0 8px;
-  color:#ffc4e8;
-  font-size:.95rem;
+  color:#ffc5e8;
+  margin:10px;
 }
 
 .date-input{
@@ -239,28 +251,53 @@ input[type=file]{
   display:none;
 }
 
+/* Glass cards */
+.glow-card{
+  background:linear-gradient(145deg,#25142fd9,#080510e8);
+  border:1px solid #ff9fda66;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 0 35px #e13e8722,inset 0 0 25px #ff7fb511;
+  backdrop-filter:blur(15px);
+}
+
+/* Gift */
+.gift{
+  font-size:clamp(65px,15vw,110px);
+  animation:pulse 1.8s infinite;
+  filter:drop-shadow(0 0 25px #ff70c5);
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.12)}
+}
+
+/* Photo gallery */
 .photo-gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
-  gap:24px;
-  margin:24px auto;
-  max-width:850px;
-  align-items:center;
+  grid-template-columns:repeat(auto-fit,minmax(125px,1fr));
+  gap:16px;
+  max-width:900px;
+  max-height:40vh;
+  overflow-y:auto;
+  padding:12px;
+  margin:15px auto;
+  scrollbar-width:thin;
+  scrollbar-color:#ff69bd transparent;
 }
 
 .photo-card{
-  background:#fff;
-  padding:10px 10px 34px;
-  border-radius:3px;
-  box-shadow:0 10px 25px #0009;
-  transform:rotate(-4deg);
+  background:linear-gradient(145deg,#fff8ff,#f5d8ed);
+  padding:8px 8px 30px;
+  border-radius:5px;
+  box-shadow:0 8px 25px #0009;
   position:relative;
   animation:photoIn .5s ease;
-  min-width:0;
+  transform:rotate(-3deg);
 }
 
-.photo-card:nth-child(2n){
-  transform:rotate(4deg);
+.photo-card:nth-child(even){
+  transform:rotate(3deg);
 }
 
 .photo-card:nth-child(3n){
@@ -272,25 +309,23 @@ input[type=file]{
   width:100%;
   aspect-ratio:1/1;
   object-fit:cover;
-  border:1px solid #ddd;
+  border:2px solid #e7b7d8;
 }
 
 .photo-card:after{
-  content:"♡ special memory ♡";
+  content:"♡ My Beautiful Memory ♡";
   position:absolute;
-  bottom:8px;
+  bottom:6px;
   left:0;
   right:0;
-  text-align:center;
-  color:#4b2941;
-  font-size:11px;
-  font-family:"Great Vibes",cursive;
+  color:#542b4b;
+  font:14px "Great Vibes",cursive;
 }
 
 @keyframes photoIn{
   from{
     opacity:0;
-    transform:scale(.75) rotate(0);
+    transform:scale(.5) rotate(0);
   }
   to{
     opacity:1;
@@ -299,146 +334,130 @@ input[type=file]{
 
 .photo-placeholder{
   grid-column:1/-1;
-  padding:30px;
-  color:#e7c1df;
-  border:1px dashed #ff9fda55;
-  border-radius:18px;
-  background:#ffffff08;
+  padding:25px;
+  border:1px dashed #ff9fda66;
+  border-radius:20px;
+  color:#edc6e5;
 }
 
-.timeline{
+/* Memory cards */
+.memory-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:18px;
-  margin:25px 0;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin:18px auto;
+  max-width:650px;
 }
 
 .memory{
-  padding:25px;
-  border-radius:18px;
-  background:linear-gradient(145deg,#ffffff0e,#ff4fa308);
+  padding:15px;
   border:1px solid #ff9fda44;
-  box-shadow:0 0 20px #ff4fa311;
+  border-radius:18px;
+  background:linear-gradient(145deg,#ffffff10,#ff4fa308);
+  box-shadow:0 0 18px #ff4fa311;
 }
 
 .memory span{
-  font-size:35px;
-  display:block;
-  margin-bottom:10px;
-}
-
-#finale{
-  background:radial-gradient(
-    circle at 50% 45%,
-    #7b1d5b35,
-    transparent 55%
-  );
-}
-
-.decor{
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  z-index:1;
-  overflow:hidden;
-}
-
-.decor .moon{
-  position:absolute;
-  right:8%;
-  top:9%;
-  font-size:34px;
-  filter:drop-shadow(0 0 12px #fff4);
-}
-
-.decor .rose{
-  position:absolute;
   font-size:28px;
-  opacity:.75;
-  filter:drop-shadow(0 0 10px #ff4fa455);
 }
 
-.decor .rose.one{
-  left:4%;
-  bottom:8%;
+.memory b{
+  color:#ffc1e5;
+  display:block;
+  margin:5px;
 }
 
-.decor .rose.two{
-  right:5%;
-  bottom:12%;
+/* Wishes */
+.wishes{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  max-width:750px;
+  margin:15px auto;
 }
 
-.decor .rose.three{
-  left:8%;
-  top:17%;
+.wish{
+  background:#ffffff0b;
+  border:1px solid #ff9fda44;
+  border-radius:15px;
+  padding:12px;
+  color:#f8d9ec;
+  font-size:.9rem;
 }
 
-.decor .rose.four{
-  right:10%;
-  top:30%;
+.wish span{
+  color:#ff8bc9;
+  margin-right:5px;
 }
 
-.decor .spark{
-  position:absolute;
-  color:#ff8fc8;
-  font-size:18px;
-  animation:twinkle 2.5s infinite alternate;
+/* Hearts */
+.heart{
+  position:fixed;
+  bottom:-30px;
+  font-size:22px;
+  opacity:.6;
+  pointer-events:none;
+  z-index:4;
+  animation:float 9s linear infinite;
 }
 
-.decor .s1{
-  left:18%;
-  top:12%;
-}
-
-.decor .s2{
-  right:22%;
-  top:18%;
-  animation-delay:.5s;
-}
-
-.decor .s3{
-  left:12%;
-  bottom:25%;
-  animation-delay:1s;
-}
-
-.decor .s4{
-  right:15%;
-  bottom:18%;
-  animation-delay:1.5s;
-}
-
-@keyframes twinkle{
-  from{
-    opacity:.2;
-    transform:scale(.7);
+@keyframes float{
+  0%{
+    transform:translateY(0) rotate(0);
+    opacity:0;
   }
-  to{
-    opacity:1;
-    transform:scale(1.3);
+  15%{opacity:.8}
+  100%{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
   }
 }
 
+/* Mobile design */
 @media(max-width:600px){
   section{
-    padding:28px 14px;
+    padding:12px;
   }
 
   .glow-card{
-    padding:22px;
+    padding:18px;
   }
 
-  .gift{
-    font-size:85px;
+  .moon{
+    width:48px;
+    height:48px;
+  }
+
+  .moon:after{
+    width:45px;
+    height:45px;
   }
 
   .photo-gallery{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:18px;
+    grid-template-columns:repeat(2,1fr);
+    max-height:35vh;
+  }
+
+  .memory-grid,.wishes{
+    gap:8px;
+  }
+
+  .memory{
+    padding:10px;
+  }
+
+  .memory p{
+    font-size:.78rem;
+  }
+
+  .wish{
+    font-size:.75rem;
+    padding:9px;
   }
 
   .btn{
-    padding:13px 22px;
+    padding:11px 19px;
+    font-size:.9rem;
   }
 }
 </style>
@@ -448,380 +467,313 @@ input[type=file]{
 
 <div id="hearts"></div>
 
-<!-- WELCOME PAGE -->
+<!-- Common moonlight decoration -->
+<script>
+function decoration(){
+  return `
+    <div class="decor" aria-hidden="true">
+      <div class="moon"></div>
+      <div class="star s1">✦</div>
+      <div class="star s2">✧</div>
+      <div class="star s3">✦</div>
+      <div class="star s4">♡</div>
+      <div class="flower f1">🌹</div>
+      <div class="flower f2">🌸</div>
+      <div class="flower f3">🌺</div>
+      <div class="flower f4">🌷</div>
+      <div class="lantern l1">🏮</div>
+      <div class="lantern l2">🏮</div>
+    </div>
+  `;
+}
+</script>
+
+<!-- HOME PAGE -->
 <section id="welcome" class="active">
+  <div id="welcomeDecor"></div>
 
-<div class="decor" aria-hidden="true">
-  <span class="moon">☾</span>
-  <span class="rose one">🌹</span>
-  <span class="rose two">🌹</span>
-  <span class="rose three">🌸</span>
-  <span class="rose four">🌸</span>
-  <span class="spark s1">✦</span>
-  <span class="spark s2">✧</span>
-  <span class="spark s3">♡</span>
-  <span class="spark s4">✦</span>
-</div>
+  <div class="container">
+    <div class="small">♡ A SPECIAL SURPRISE ♡</div>
 
-<div class="container">
+    <div class="script">
+      Happy Birthday<br>
+      <span class="personName">Your Love</span> 💖
+    </div>
 
-<div style="font-size:1.1rem;letter-spacing:3px">
-A SPECIAL SURPRISE 💌
-</div>
+    <p style="color:#ffc3e6;margin:12px 0">
+      ✨ A magical night, made just for you ✨
+    </p>
 
-<div class="script">
-Happy Birthday<br>
-<span class="personName">Your Love</span> ❤️
-</div>
+    <div class="glow-card">
+      <p>
+        "Chaand ki roshni bhi feeki lagti hai,<br>
+        Jab tumhari muskaan saamne aati hai. 🌙"
+      </p>
+    </div>
 
-<p id="birthdayDateText"
-style="margin-top:15px;color:#ffc4e8;letter-spacing:2px">
-Your Special Day 🎂
-</p>
+    <div class="name-box">
+      <input id="nameInput" class="name-input"
+        type="text" maxlength="40"
+        placeholder="Enter birthday person's name ❤️">
 
-<p style="max-width:650px;margin:25px auto">
-Today is not just another day...<br>
-It is the day someone special came into this world. ✨
-</p>
+      <label class="date-label" for="dobInput">
+        🎂 Enter Birthday Date
+      </label>
 
-<div class="name-box">
+      <input id="dobInput" class="date-input" type="date">
+    </div>
 
-<input
-id="nameInput"
-class="name-input"
-type="text"
-maxlength="40"
-placeholder="Enter birthday person's name ❤️"
->
-
-<label class="date-label" for="dobInput">
-Enter Birthday Date 🎂
-</label>
-
-<input
-id="dobInput"
-class="date-input"
-type="date"
->
-
-</div>
-
-<button class="btn" onclick="startSurprise()">
-Click to Begin ✨
-</button>
-
-</div>
+    <button class="btn" onclick="startSurprise()">
+      Begin Your Surprise ✨
+    </button>
+  </div>
 </section>
-
 
 <!-- GIFT PAGE -->
 <section id="gift">
+  <div id="giftDecor"></div>
 
-<div class="decor" aria-hidden="true">
-  <span class="moon">☾</span>
-  <span class="rose one">🌹</span>
-  <span class="rose two">🌹</span>
-  <span class="rose three">🌸</span>
-  <span class="rose four">🌸</span>
-  <span class="spark s1">✦</span>
-  <span class="spark s2">✧</span>
-  <span class="spark s3">♡</span>
-  <span class="spark s4">✦</span>
-</div>
+  <div class="container">
+    <div class="small">♡ STEP 1 / 5 ♡</div>
 
-<div class="container">
+    <h2>A Little Gift For You 🎁</h2>
 
-<div class="small">STEP 1 / 5</div>
+    <div class="gift">🎁</div>
 
-<h2>A little gift for you 🎁</h2>
+    <p style="margin:10px">
+      Ek chhota sa tohfa, ek badi si khushi ke naam... 💖
+    </p>
 
-<div class="gift">🎁</div>
+    <div class="glow-card">
+      <p>
+        "Phoolon se bhi khoobsurat ho tum,<br>
+        Meri har dua ki zaroorat ho tum. 🌹"
+      </p>
+    </div>
 
-<p>There is something special waiting inside...</p>
+    <button class="btn" onclick="openGift()">
+      Open Your Gift 💝
+    </button>
 
-<button class="btn" onclick="openGift()">
-Open Your Gift 💖
-</button>
+    <div id="giftMessage" class="glow-card hidden">
+      <h2 style="font-size:2.2rem">
+        Happy Birthday, <span class="personName">Your Love</span>! 🎂
+      </h2>
 
-<div id="giftMessage" class="glow-card hidden">
+      <p>
+        Tumhari muskaan meri duniya ko roshan karti hai.
+        Aaj ka din sirf tumhare naam hai. 💖
+      </p>
 
-<div class="script" style="font-size:3.2rem">
-Happy Birthday,
-<span class="personName">Your Love</span>! 🎂
-</div>
-
-<p>
-<span class="personName">Your Love</span>, your smile makes my world
-brighter and your presence makes every ordinary day special.
-
-On <span id="giftDateText">your special day</span>, the world
-received someone truly precious—and I am lucky to have you
-in my life. 💖
-</p>
-
-<button class="btn" onclick="go('message')">
-Next Surprise →
-</button>
-
-</div>
-
-</div>
+      <button class="btn" onclick="go('message')">
+        Next Surprise →
+      </button>
+    </div>
+  </div>
 </section>
-
 
 <!-- MESSAGE PAGE -->
 <section id="message">
+  <div id="messageDecor"></div>
 
-<div class="decor" aria-hidden="true">
-  <span class="moon">☾</span>
-  <span class="rose one">🌹</span>
-  <span class="rose two">🌹</span>
-  <span class="rose three">🌸</span>
-  <span class="rose four">🌸</span>
-  <span class="spark s1">✦</span>
-  <span class="spark s2">✧</span>
-  <span class="spark s3">♡</span>
-  <span class="spark s4">✦</span>
-</div>
+  <div class="container">
+    <div class="small">♡ STEP 2 / 5 ♡</div>
 
-<div class="container">
+    <h2>A Message Just For You 💌</h2>
 
-<div class="small">STEP 2 / 5</div>
+    <div class="glow-card">
+      <p>
+        Hey <span class="personName">Your Love</span>, ❤️
+        <br><br>
 
-<h2>A Message Just For You 💕</h2>
+        Tum meri zindagi ka woh khoobsurat hissa ho
+        jise main kabhi khona nahi chahta.
+        Tumhari khushi mere liye sabse khaas hai.
+        <br><br>
 
-<div class="glow-card">
+        Tumhare har sapne ko pankh milein,
+        tumhari har subah khushiyon se bhari ho,
+        aur tumhari har shaam sukoon lekar aaye.
+        <br><br>
 
-<p id="personalMessage">
+        Janamdin par bas itni si dua hai—
+        tum hamesha muskurate raho. 🌸
+        <br><br>
 
-Hey <span class="personName">Your Love</span>, my love ❤️
-<br><br>
+        "Teri khushi mein hi meri khushi hai,
+        Teri muskaan meri zindagi ki roshni hai." 💞
+      </p>
+    </div>
 
-Some people enter our lives and quietly make everything more
-beautiful. You are that special person for me.
-
-<br><br>
-
-Your smile is my favourite little happiness, your voice is my
-comfort, and your presence is a gift I never want to take for
-granted.
-
-<br><br>
-
-On your birthday, I wish you endless smiles, peaceful days,
-big achievements, and every beautiful dream coming true.
-May life always give you reasons to shine.
-
-<br><br>
-
-Happy Birthday, <span class="personName">Your Love</span>!
-Keep smiling, keep glowing, and always remember that you are
-deeply special. 🎂🌸
-
-<br><br>
-
-Forever cheering for you,<br>
-Someone who cares for you endlessly 💞
-
-</p>
-
-</div>
-
-<button class="btn" onclick="go('photo')">
-Reveal a Special Photo 📸
-</button>
-
-</div>
+    <button class="btn" onclick="go('photo')">
+      Reveal Beautiful Memories 📸
+    </button>
+  </div>
 </section>
-
 
 <!-- PHOTO PAGE -->
 <section id="photo">
+  <div id="photoDecor"></div>
 
-<div class="decor" aria-hidden="true">
-  <span class="moon">☾</span>
-  <span class="rose one">🌹</span>
-  <span class="rose two">🌹</span>
-  <span class="rose three">🌸</span>
-  <span class="rose four">🌸</span>
-  <span class="spark s1">✦</span>
-  <span class="spark s2">✧</span>
-  <span class="spark s3">♡</span>
-  <span class="spark s4">✦</span>
-</div>
+  <div class="container">
+    <div class="small">♡ STEP 3 / 5 ♡</div>
 
-<div class="container">
+    <h2>Moonlight Memories 🌙</h2>
 
-<div class="small">STEP 3 / 5</div>
+    <p>
+      Apni saari favourite photos choose karein. 📸
+    </p>
 
-<h2>A Special Memory 📷</h2>
+    <div id="photoGallery" class="photo-gallery">
+      <div class="photo-placeholder">
+        💖<br><br>
+        Your beautiful memories will appear here...
+      </div>
+    </div>
 
-<p>Choose one or multiple photos for your special memory. 📸</p>
+    <button class="btn" type="button"
+      onclick="document.getElementById('photoUpload').click()">
+      📷 Choose Multiple Photos
+    </button>
 
-<div id="photoGallery" class="photo-gallery">
+    <input id="photoUpload" type="file"
+      accept="image/*" multiple>
 
-<div class="photo-placeholder">
-❤️
-<br><br>
-Your selected photos will appear here
-</div>
+    <div>
+      <button class="btn" onclick="revealPhotos()">
+        Show My Photos 💗
+      </button>
 
-</div>
+      <button class="btn" onclick="go('memories')">
+        Next Surprise →
+      </button>
+    </div>
 
-<button
-class="btn"
-type="button"
-onclick="document.getElementById('photoUpload').click()"
->
-Choose Multiple Photos 📷
-</button>
-
-<input
-id="photoUpload"
-type="file"
-accept="image/*"
-multiple
->
-
-<br>
-
-<button class="btn" onclick="revealPhotos()">
-Show My Photos 💗
-</button>
-
-<br>
-
-<button class="btn" onclick="go('memories')">
-Next Surprise →
-</button>
-
-</div>
+    <p style="font-size:.8rem;color:#d6b4d1">
+      "Har tasveer mein ek kahaani hai,<br>
+      Har yaad mein tumhari nishaani hai." 🌹
+    </p>
+  </div>
 </section>
-
 
 <!-- MEMORIES PAGE -->
 <section id="memories">
+  <div id="memoriesDecor"></div>
 
-<div class="decor" aria-hidden="true">
-  <span class="moon">☾</span>
-  <span class="rose one">🌹</span>
-  <span class="rose two">🌹</span>
-  <span class="rose three">🌸</span>
-  <span class="rose four">🌸</span>
-  <span class="spark s1">✦</span>
-  <span class="spark s2">✧</span>
-  <span class="spark s3">♡</span>
-  <span class="spark s4">✦</span>
-</div>
+  <div class="container">
+    <div class="small">♡ STEP 4 / 5 ♡</div>
 
-<div class="container">
+    <h2>Our Beautiful Moments 🌹</h2>
 
-<div class="small">STEP 4 / 5</div>
+    <p>
+      Chhoti-chhoti yaadein, zindagi ki badi khushiyaan...
+    </p>
 
-<h2>Our Beautiful Moments 🌹</h2>
+    <div class="memory-grid">
+      <div class="memory">
+        <span>🌸</span>
+        <b>Sweet Moments</b>
+        <p>Har pal tumhare saath khaas hai.</p>
+      </div>
 
-<p>Little moments become the most beautiful memories.</p>
+      <div class="memory">
+        <span>🤝</span>
+        <b>Always Together</b>
+        <p>Har mod par khushiyan saath rahein.</p>
+      </div>
 
-<div class="timeline">
+      <div class="memory">
+        <span>🌙</span>
+        <b>You & Me</b>
+        <p>Do dil, ek khoobsurat kahaani.</p>
+      </div>
 
-<div class="memory">
-<span>🌸</span>
-<b>Sweet Moments</b>
-<p>Every little moment with you is special.</p>
-</div>
+      <div class="memory">
+        <span>🎀</span>
+        <b>Little Things</b>
+        <p>Tumhari muskaan sabse pyari hai.</p>
+      </div>
+    </div>
 
-<div class="memory">
-<span>🤝</span>
-<b>Always Together</b>
-<p>Through every smile and every day.</p>
-</div>
+    <div class="glow-card">
+      <p>
+        "Chaand bhi sharma jaaye tumhe dekhkar,<br>
+        Itni haseen ho tum meri nazar mein." 🌙
+      </p>
+    </div>
 
-<div class="memory">
-<span>🌙</span>
-<b>You & Me</b>
-<p>Two hearts, one beautiful story.</p>
-</div>
-
-<div class="memory">
-<span>🎀</span>
-<b>Little Things</b>
-<p>Your smile is my favourite thing.</p>
-</div>
-
-</div>
-
-<button class="btn" onclick="go('finale');confetti()">
-Final Surprise 🎉
-</button>
-
-</div>
+    <button class="btn" onclick="go('finale');confetti()">
+      Final Birthday Surprise 🎉
+    </button>
+  </div>
 </section>
-
 
 <!-- FINAL PAGE -->
 <section id="finale">
+  <div id="finaleDecor"></div>
 
-<div class="decor" aria-hidden="true">
-  <span class="moon">☾</span>
-  <span class="rose one">🌹</span>
-  <span class="rose two">🌹</span>
-  <span class="rose three">🌸</span>
-  <span class="rose four">🌸</span>
-  <span class="spark s1">✦</span>
-  <span class="spark s2">✧</span>
-  <span class="spark s3">♡</span>
-  <span class="spark s4">✦</span>
-</div>
+  <div class="container">
+    <div class="small">♡ STEP 5 / 5 ♡</div>
 
-<div class="container">
+    <div class="script">
+      Happy Birthday<br>
+      <span class="personName">Your Love</span> 💖
+    </div>
 
-<div class="script">
-Happy Birthday<br>
-<span class="personName">Your Love</span> ❤️
-</div>
+    <p style="margin:12px auto;max-width:700px">
+      May your life always shine like the moonlight
+      and bloom like a beautiful garden. 🌙🌹
+    </p>
 
-<p style="max-width:650px;margin:25px auto">
+    <div class="wishes">
+      <div class="wish">💖 Stay happy, always.</div>
+      <div class="wish">🌸 Keep smiling every day.</div>
+      <div class="wish">🌟 May all your dreams come true.</div>
+      <div class="wish">🎂 Wishing you endless happiness.</div>
+      <div class="wish">🌙 May your life be full of peace.</div>
+      <div class="wish">🌹 You deserve all the love.</div>
+      <div class="wish">✨ May success follow you.</div>
+      <div class="wish">🎀 Keep shining like a star.</div>
+      <div class="wish">🦋 May every day be special.</div>
+      <div class="wish">💐 May your heart always smile.</div>
+    </div>
 
-<span class="personName">Your Love</span>, may your life always be
-filled with love, happiness, success and beautiful dreams.
+    <div class="glow-card">
+      <h2 style="font-size:2.2rem">
+        For <span class="personName">Your Love</span> 💞
+      </h2>
 
-May every new year of your life bring you closer to everything
-your heart wishes for.
+      <p>
+        "Tumhari zindagi khushiyon se sajti rahe,<br>
+        Har dua tumhari poori hoti rahe.<br>
+        Janamdin par bas yahi dua hai meri,<br>
+        Tumhari muskaan sada yunhi rehti rahe." ❤️
+      </p>
+    </div>
 
-Thank you for being you. 💗
+    <button class="btn" onclick="confetti()">
+      Make It Rain Hearts 💖
+    </button>
 
-</p>
-
-<div class="glow-card">
-
-<h2>
-For <span class="personName">Your Love</span>,
-Forever & Always 💞
-</h2>
-
-<p>With all my love, today and every day.</p>
-
-</div>
-
-<button class="btn" onclick="confetti()">
-Make It Rain Hearts 💖
-</button>
-
-<p class="small">
-Made with love, especially for
-<span class="personName">Your Love</span>. 🎀
-</p>
-
-</div>
+    <p class="small">
+      Made with love, especially for
+      <span class="personName">Your Love</span> 🎀
+    </p>
+  </div>
 </section>
 
-
 <script>
+/* Add decorations to every page */
+document.getElementById("welcomeDecor").innerHTML=decoration();
+document.getElementById("giftDecor").innerHTML=decoration();
+document.getElementById("messageDecor").innerHTML=decoration();
+document.getElementById("photoDecor").innerHTML=decoration();
+document.getElementById("memoriesDecor").innerHTML=decoration();
+document.getElementById("finaleDecor").innerHTML=decoration();
 
-/* PAGE CHANGE */
+/* Page navigation */
 function go(id){
-
-  document.querySelectorAll("section").forEach(function(section){
+  document.querySelectorAll("section").forEach(section=>{
     section.classList.remove("active");
   });
 
@@ -829,86 +781,40 @@ function go(id){
 
   if(nextPage){
     nextPage.classList.add("active");
-    nextPage.scrollTop=0;
   }
 }
 
-
-/* OPEN GIFT */
-function openGift(){
-
-  document.getElementById("giftMessage")
-  .classList.remove("hidden");
-
-  confetti();
-}
-
-
-/* DATE FORMAT */
-function formatDate(dateValue){
-
-  if(!dateValue){
-    return "your special day";
-  }
-
-  const parts=dateValue.split("-");
-
-  if(parts.length!==3){
-    return dateValue;
-  }
-
-  const months=[
-    "January","February","March","April",
-    "May","June","July","August",
-    "September","October","November","December"
-  ];
-
-  return parts[2]+" "+
-  months[Number(parts[1])-1]+" "+
-  parts[0];
-}
-
-
-/* START SURPRISE */
+/* Start surprise */
 function startSurprise(){
+  const name=document.getElementById("nameInput").value.trim();
+  const dob=document.getElementById("dobInput").value;
 
-  const nameInput=document.getElementById("nameInput");
-  const dobInput=document.getElementById("dobInput");
-
-  const enteredName=nameInput.value.trim();
-  const enteredDOB=dobInput.value;
-
-  if(!enteredName){
-
+  if(!name){
     alert("Please enter a name first ❤️");
-    nameInput.focus();
+    document.getElementById("nameInput").focus();
     return;
   }
 
-  if(!enteredDOB){
-
+  if(!dob){
     alert("Please enter the birthday date 🎂");
-    dobInput.focus();
+    document.getElementById("dobInput").focus();
     return;
   }
 
-  document.querySelectorAll(".personName").forEach(function(element){
-    element.textContent=enteredName;
+  document.querySelectorAll(".personName").forEach(element=>{
+    element.textContent=name;
   });
-
-  const readableDate=formatDate(enteredDOB);
-
-  document.getElementById("birthdayDateText").textContent=
-    readableDate+" 🎂";
-
-  document.getElementById("giftDateText").textContent=
-    readableDate;
 
   go("gift");
 }
 
+/* Open gift */
+function openGift(){
+  document.getElementById("giftMessage").classList.remove("hidden");
+  confetti();
+}
 
-/* MULTIPLE PHOTOS */
+/* Photo selection */
 let selectedPhotos=[];
 
 document.getElementById("photoUpload").addEventListener(
@@ -917,53 +823,48 @@ document.getElementById("photoUpload").addEventListener(
 );
 
 function loadPhotos(event){
-
   const files=Array.from(event.target.files || [])
-    .filter(function(file){
-      return file.type.startsWith("image/");
-    });
+    .filter(file=>file.type.startsWith("image/"));
 
-  if(files.length===0){
-
-    alert("Please choose image files only ❤️");
+  if(!files.length){
+    alert("Please select image files only ❤️");
     return;
   }
 
   selectedPhotos=[];
-
   const gallery=document.getElementById("photoGallery");
 
   gallery.innerHTML=
-    '<p class="small">Loading your photos... 📸</p>';
+    '<p class="small">Loading your beautiful photos... 📸</p>';
 
   let completed=0;
 
-  files.forEach(function(file){
-
+  files.forEach(file=>{
     const reader=new FileReader();
 
     reader.onload=function(){
+      selectedPhotos.push({
+        src:reader.result,
+        name:file.name
+      });
 
-      selectedPhotos.push(reader.result);
       completed++;
 
       if(completed===files.length){
-
         gallery.innerHTML=
-          '<p class="small">'+
-          selectedPhotos.length+
-          " photo(s) selected. Tap 'Show My Photos'. ❤️</p>";
+          '<div class="photo-placeholder">'+
+          '💖 '+selectedPhotos.length+
+          ' photo(s) selected.<br>'+
+          'Tap "Show My Photos" ❤️</div>';
       }
     };
 
     reader.onerror=function(){
-
       completed++;
 
-      if(completed===files.length && selectedPhotos.length===0){
-
+      if(completed===files.length && !selectedPhotos.length){
         gallery.innerHTML=
-          '<p class="small">Could not load the photos. Please try again.</p>';
+          '<p class="small">Could not load photos. Please try again.</p>';
       }
     };
 
@@ -971,28 +872,24 @@ function loadPhotos(event){
   });
 }
 
-
-/* SHOW PHOTOS */
+/* Show selected photos */
 function revealPhotos(){
-
   const gallery=document.getElementById("photoGallery");
 
-  if(selectedPhotos.length===0){
-
+  if(!selectedPhotos.length){
     alert("Please choose at least one photo first ❤️");
     return;
   }
 
   gallery.innerHTML="";
 
-  selectedPhotos.forEach(function(photoSrc,index){
-
+  selectedPhotos.forEach((photo,index)=>{
     const card=document.createElement("div");
     card.className="photo-card";
 
     const img=document.createElement("img");
-    img.src=photoSrc;
-    img.alt="Special memory "+(index+1);
+    img.src=photo.src;
+    img.alt="Beautiful memory "+(index+1);
 
     card.appendChild(img);
     gallery.appendChild(card);
@@ -1001,62 +898,53 @@ function revealPhotos(){
   confetti();
 }
 
-
-/* CONFETTI EFFECT */
+/* Heart animation */
 function confetti(){
+  const symbols=["💖","💕","✨","🎉","🌸","🌹"];
 
   for(let i=0;i<35;i++){
-
     const el=document.createElement("div");
 
-    el.textContent=[
-      "💖","💕","✨","🎉","🌸"
-    ][Math.floor(Math.random()*5)];
+    el.textContent=symbols[
+      Math.floor(Math.random()*symbols.length)
+    ];
 
     el.style.position="fixed";
     el.style.left=Math.random()*100+"vw";
     el.style.top="-30px";
     el.style.fontSize=(15+Math.random()*22)+"px";
-    el.style.zIndex=99;
+    el.style.zIndex="99";
     el.style.transition="transform 3s linear,opacity 3s";
 
     document.body.appendChild(el);
 
-    setTimeout(function(){
-
+    setTimeout(()=>{
       el.style.transform=
         "translateY(110vh) rotate(720deg)";
-
-      el.style.opacity=0;
-
+      el.style.opacity="0";
     },30);
 
-    setTimeout(function(){
+    setTimeout(()=>{
       el.remove();
     },3300);
   }
 }
 
-
-/* FLOATING HEARTS */
-setInterval(function(){
-
+/* Floating hearts */
+setInterval(()=>{
   const heart=document.createElement("div");
 
   heart.className="heart";
   heart.textContent="❤";
   heart.style.left=Math.random()*100+"vw";
-  heart.style.animationDuration=
-    (6+Math.random()*5)+"s";
+  heart.style.animationDuration=(6+Math.random()*5)+"s";
 
   document.getElementById("hearts").appendChild(heart);
 
-  setTimeout(function(){
+  setTimeout(()=>{
     heart.remove();
   },11000);
-
 },700);
-
 </script>
 
 </body>
